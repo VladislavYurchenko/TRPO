@@ -8,11 +8,12 @@ class Line implements EquationInterface
     protected $x;   
     function solve($a, $b, $c ){
         if($a==0){
-            return false;
+           throw new YurchenkoException("Ошибка: уравнения не существует.");
         }
+        \Yurchenko\MyLog::log("Определено, что это линейное уравнение");
         $x = -$b/$a;
         $this->x = $x;
-        return $x;
+        return [$x];
     }
 }
 ?>
