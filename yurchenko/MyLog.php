@@ -7,21 +7,39 @@ use core\LogAbstract;
 
 class MyLog extends LogAbstract implements LogInterface
 {
+    public function _log($str)
+    {
+        $this->log[]=$str;
+    }
+
     public static function log($str)
     {
-        
-        array_push(self::$log,$str);
+        self::Instance()->_log($str);
     }
     public function _write()
     {
-        foreach(MyLog::$log as $el){
-            echo $el;
+        $log = '';        
+        foreach($this->log as $el){
+            $log .= $el."\n";
         }
+        echo $log;
+        
+
+        $d = new \DateTime();
+       
+        $file = "./Log/". $d->format('d-m-Y\TH:i:s.u').".log";
+
+        if (!is_dir('./Log/')) {
+            mkdir("./Log/");
+            
+        }
+        file_put_contents($file,$log);
     }
    
     public static function write()
     {
-        return MyLog:: _write();
+        
+        return self::Instance()-> _write();
     }
 }
 
