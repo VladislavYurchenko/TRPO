@@ -3,9 +3,10 @@
 use yurchenko\MyLog;
 use yurchenko\Quadratic;
 use yurchenko\YurchenkoException;
-include './core/EquationInterface.php';
-include './core/LogAbstract.php';
-include './core/LogInterface.php';
+
+include './core/core/EquationInterface.php';
+include './core/core/LogAbstract.php';
+include './core/core/LogInterface.php';
 include './yurchenko/Line.php';
 include './yurchenko/Quadratic.php';
 include './yurchenko/MyLog.php';

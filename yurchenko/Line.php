@@ -1,12 +1,12 @@
 <?php 
 namespace yurchenko;
-
 use core\EquationInterface;
 
 class Line implements EquationInterface
 {
     protected $x;   
-    function solve($a, $b, $c ){
+    function solve( $a,  $b,  $c ): array{
+
         if($a==0){
            throw new YurchenkoException("Ошибка: уравнения не существует.");
         }
@@ -15,5 +15,6 @@ class Line implements EquationInterface
         $this->x = $x;
         return [$x];
     }
+ 
 }
 ?>
