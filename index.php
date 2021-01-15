@@ -1,18 +1,10 @@
 <?php
 
+use yurchenko\YurchenkoException;
 use yurchenko\MyLog;
 use yurchenko\Quadratic;
-use yurchenko\YurchenkoException;
 
-include './core/core/EquationInterface.php';
-include './core/core/LogAbstract.php';
-include './core/core/LogInterface.php';
-include './yurchenko/Line.php';
-include './yurchenko/Quadratic.php';
-include './yurchenko/MyLog.php';
-include './yurchenko/YurchenkoExceprion.php';
-
-
+require __DIR__ . '/vendor/autoload.php';
 
 $b = new Quadratic();
 
