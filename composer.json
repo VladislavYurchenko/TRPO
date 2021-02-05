@@ -20,6 +20,9 @@
     "minimum-stability": "dev",
     "require": {
         "rok9ru/trpo-core":"^2.0",
-        "vladislavyurchenko/yurchenko":"^1.2"
+        "vladislavyurchenko/yurchenko":"^1.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "9"
     }
 }
